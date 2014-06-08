@@ -1,5 +1,4 @@
 #1st gen
-#TODO: Constraints = Ken 
 #TODO: Population Pokedex = Cass
 #TODO: Population rest = Josh
 #TODO: Population itemdex = Henry
@@ -21,21 +20,22 @@ SET FOREIGN_KEY_CHECKS = 1;
 CREATE TABLE Box (
 boxNumber INT NOT NULL PRIMARY KEY,
 boxName CHAR(15) NULL,
-boxWallpaper CHAR(15) NULL,
+boxWallpaper CHAR(15) NULL
 );
 
 CREATE TABLE Pokedex (
 dexNo INT NOT NULL PRIMARY KEY,
 species CHAR(15) NOT NULL,
-gender CHAR(2) NOT NULL CHECK (gender IN ('M', 'F', 'MF', 'U')),
+type CHAR(15) NULL,
+gender CHAR(2) NOT NULL CHECK (gender IN ('M', 'F', 'MF', 'U'))
 );
 
 CREATE TABLE Pokemon (
 pokeID INT NOT NULL PRIMARY KEY,
 pokeName CHAR(15) NOT NULL,
 dexNo INT NOT NULL,
-LEVEL INT NOT NULL, TYPE CHAR(15) NULL,
-gender CHAR(1) NOT NULL, # GENDER CONSTARINT
+level INT NOT NULL,
+gender CHAR(1) NOT NULL, CHECK (gender LIKE (SELECT gender FROM Pokedex WHERE Pokedex.dexNo = Pokemon.dexNo LIMIT 1)),
 FOREIGN KEY (dexNo) REFERENCES Pokedex(dexNo)
 );
 
