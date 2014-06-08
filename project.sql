@@ -2,6 +2,8 @@
 #TODO: Population Pokedex = Cass
 #TODO: Population rest = Josh
 #TODO: Population itemdex = Henry
+#TODO: Total participation professorsworkin, trainersfrom, profmanagebox, owns
+#CHECKS are ignored
 
 SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS profmanagebox;
@@ -11,32 +13,37 @@ DROP TABLE IF EXISTS box;
 DROP TABLE IF EXISTS pokemon;
 DROP TABLE IF EXISTS trainers;
 DROP TABLE IF EXISTS professors;
+DROP TABLE IF EXISTS trainersfrom;
+DROP TABLE IF EXISTS professorsworkin;
 DROP TABLE IF EXISTS towns;
 DROP TABLE IF EXISTS itemheld;
 DROP TABLE IF EXISTS pokedex;
 DROP TABLE IF EXISTS itemdex;
+DROP TABLE IF EXISTS friends;
 SET FOREIGN_KEY_CHECKS = 1;
 
 CREATE TABLE Box (
-boxNumber INT NOT NULL PRIMARY KEY,
+boxNumber INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 boxName CHAR(15) NULL,
 boxWallpaper CHAR(15) NULL
 );
 
 CREATE TABLE Pokedex (
-dexNo INT NOT NULL PRIMARY KEY,
+dexNo INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 species CHAR(15) NOT NULL,
-type CHAR(15) NULL,
-gender CHAR(2) NOT NULL CHECK (gender IN ('M', 'F', 'MF', 'U'))
+type CHAR(15) NOT NULL,
+gender CHAR(2) NOT NULL,
+CHECK (gender IN ('M', 'F', 'MF', 'U'))
 );
 
 CREATE TABLE Pokemon (
-pokeID INT NOT NULL PRIMARY KEY,
+pokeID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 pokeName CHAR(15) NOT NULL,
 dexNo INT NOT NULL,
 level INT NOT NULL,
-gender CHAR(1) NOT NULL, CHECK (gender LIKE (SELECT gender FROM Pokedex WHERE Pokedex.dexNo = Pokemon.dexNo LIMIT 1)),
-FOREIGN KEY (dexNo) REFERENCES Pokedex(dexNo)
+gender CHAR(1) NOT NULL,
+FOREIGN KEY (dexNo) REFERENCES Pokedex(dexNo),
+CHECK (gender LIKE (SELECT gender FROM Pokedex WHERE Pokedex.dexNo = Pokemon.dexNo LIMIT 1))
 );
 
 CREATE TABLE Towns(
@@ -45,25 +52,38 @@ region CHAR(15) NULL
 );
 
 CREATE TABLE Trainers(
-trainerID INT NOT NULL PRIMARY KEY,
-trainerName CHAR(15) NOT NULL,
-townName CHAR(15) NOT NULL, FOREIGN KEY (townName) REFERENCES Towns (townName)
+trainerID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+trainerName CHAR(15) NOT NULL
+);
+
+CREATE TABLE TrainersFrom(
+trainerID INT NOT NULL,
+townName CHAR(15) NOT NULL, FOREIGN KEY (townName) REFERENCES Towns (townName), FOREIGN KEY (trainerID) REFERENCES Trainers(trainerID), PRIMARY KEY (trainerID, townName)
+);
+
+CREATE TABLE Friends(
+trainerID1 INT NOT NULL,
+trainerID2 INT NOT NULL, FOREIGN KEY (trainerID1) REFERENCES Trainers(trainerID), FOREIGN KEY (trainerID2) REFERENCES Trainers(trainerID), PRIMARY KEY (trainerID1, trainerID2)
 );
 
 CREATE TABLE Professors(
-profName CHAR(15) NOT NULL PRIMARY KEY,
-townName CHAR(15) NOT NULL, FOREIGN KEY (townName) REFERENCES Towns (townName)
+profName CHAR(15) NOT NULL PRIMARY KEY
+);
+
+CREATE TABLE ProfessorsWorkIn(
+profName CHAR(15) NOT NULL, 
+townName CHAR(15) NOT NULL, FOREIGN KEY (townName) REFERENCES Towns (townName), FOREIGN KEY (profName) REFERENCES Professors(profName), PRIMARY KEY (profName, townName)
 );
 
 CREATE TABLE ItemDex(
 itemName CHAR(15) NOT NULL PRIMARY KEY,
-description CHAR(40) NULL
+description CHAR(40) NOT NULL
 );
 
 CREATE TABLE ItemHeld(
-pokeID INT NOT NULL PRIMARY KEY,
+pokeID INT NOT NULL,
 itemName CHAR(15) NOT NULL,
-FOREIGN KEY (pokeID) REFERENCES Pokemon (pokeID), FOREIGN KEY (itemName) REFERENCES ItemDex(itemName)
+FOREIGN KEY (pokeID) REFERENCES Pokemon (pokeID), FOREIGN KEY (itemName) REFERENCES ItemDex(itemName), PRIMARY KEY (pokeID, itemName)
 );
 
 CREATE TABLE Owns (
