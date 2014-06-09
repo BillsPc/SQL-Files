@@ -1,8 +1,7 @@
 #1st gen
 #TODO: Population Pokedex = Cass
 #TODO: Population rest = Josh
-#TODO: Population itemdex = Henry
-#TODO: Total participation professorsworkin, trainersfrom, profmanagebox, owns
+#TODO: Total participation profmanagebox, owns
 #CHECKS are ignored
 
 SET FOREIGN_KEY_CHECKS = 0;
@@ -13,8 +12,6 @@ DROP TABLE IF EXISTS box;
 DROP TABLE IF EXISTS pokemon;
 DROP TABLE IF EXISTS trainers;
 DROP TABLE IF EXISTS professors;
-DROP TABLE IF EXISTS trainersfrom;
-DROP TABLE IF EXISTS professorsworkin;
 DROP TABLE IF EXISTS towns;
 DROP TABLE IF EXISTS itemheld;
 DROP TABLE IF EXISTS pokedex;
@@ -53,12 +50,8 @@ region CHAR(15) NULL
 
 CREATE TABLE Trainers(
 trainerID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-trainerName CHAR(15) NOT NULL
-);
-
-CREATE TABLE TrainersFrom(
-trainerID INT NOT NULL,
-townName CHAR(15) NOT NULL, FOREIGN KEY (townName) REFERENCES Towns (townName), FOREIGN KEY (trainerID) REFERENCES Trainers(trainerID), PRIMARY KEY (trainerID, townName)
+trainerName CHAR(15) NOT NULL,
+townName CHAR(15) NOT NULL, FOREIGN KEY (townName) REFERENCES Towns (townName)
 );
 
 CREATE TABLE Friends(
@@ -67,12 +60,8 @@ trainerID2 INT NOT NULL, FOREIGN KEY (trainerID1) REFERENCES Trainers(trainerID)
 );
 
 CREATE TABLE Professors(
-profName CHAR(15) NOT NULL PRIMARY KEY
-);
-
-CREATE TABLE ProfessorsWorkIn(
-profName CHAR(15) NOT NULL, 
-townName CHAR(15) NOT NULL, FOREIGN KEY (townName) REFERENCES Towns (townName), FOREIGN KEY (profName) REFERENCES Professors(profName), PRIMARY KEY (profName, townName)
+profName CHAR(15) NOT NULL PRIMARY KEY,
+townName CHAR(15) NOT NULL, FOREIGN KEY (townName) REFERENCES Towns (townName)
 );
 
 CREATE TABLE ItemDex(
