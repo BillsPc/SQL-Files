@@ -65,14 +65,15 @@ townName CHAR(15) NOT NULL, FOREIGN KEY (townName) REFERENCES Towns (townName)
 );
 
 CREATE TABLE ItemDex(
-itemName CHAR(15) NOT NULL PRIMARY KEY,
+itemID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+itemName CHAR(15) NOT NULL,
 description CHAR(40) NOT NULL
 );
 
 CREATE TABLE ItemHeld(
 pokeID INT NOT NULL,
-itemName CHAR(15) NOT NULL,
-FOREIGN KEY (pokeID) REFERENCES Pokemon (pokeID), FOREIGN KEY (itemName) REFERENCES ItemDex(itemName), PRIMARY KEY (pokeID, itemName)
+itemID INT NOT NULL,
+FOREIGN KEY (pokeID) REFERENCES Pokemon (pokeID), FOREIGN KEY (itemID) REFERENCES ItemDex(itemID), PRIMARY KEY (pokeID, itemID)
 );
 
 CREATE TABLE Owns (
