@@ -1,6 +1,6 @@
-#all the towns for the first 3 generations
+--all the towns for the first 3 generations
 
-#Kanto Region
+--Kanto Region
 insert into Towns
 value('Pallet Town', 'Kanto');
 
@@ -32,7 +32,7 @@ insert into Towns
 value('Cinnabar Island', 'Kanto');
 
 
-#Johto Region
+--Johto Region
 insert into Towns
 value('New Bark Town', 'Johto');
 
@@ -61,7 +61,7 @@ insert into Towns
 value('Blackthorn City', 'Johto');
 
 
-#Hoenn Region
+--Hoenn Region
 insert into Towns
 value('Littleroot Town', 'Hoenn');
 
