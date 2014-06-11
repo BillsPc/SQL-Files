@@ -1,44 +1,44 @@
 insert into Professors
-value('Oak', 'Pallet Town');
+values('Oak', 'Pallet Town');
 
 insert into Professors
-value('Elm', 'New Bark Town');
+values('Elm', 'New Bark Town');
 
 insert into Professors
-value('Birch', 'Littleroot Town');
+values('Birch', 'Littleroot Town');
 
 insert into Professors
-value('Cozmo', 'Fallarbor Town');
+values('Cozmo', 'Fallarbor Town');
 
 insert into Professors
-value('Gordon', 'Saffron City');
+values('Gordon', 'Saffron City');
 
 insert into Professors
-value('Alden', 'Oldale Town');
+values('Alden', 'Oldale Town');
 
 insert into Professors
-value('Hale', 'Olivine City');
+values('Hale', 'Olivine City');
 
 insert into Professors
-value('Apple', 'Celadon City');
+values('Apple', 'Celadon City');
 
 insert into Professors
-value('Ivy', 'Cerulean City');
+values('Ivy', 'Cerulean City');
 
 insert into Professors
-value('Orange', 'Fuchsia City');
+values('Orange', 'Fuchsia City');
 
 insert into Professors
-value('Grapefruit', 'Mahogany Town');
+values('Grapefruit', 'Mahogany Town');
 
 insert into Professors
-value('Avocado', 'Blackthorn City');
+values('Avocado', 'Blackthorn City');
 
 insert into Professors
-value('Pine', 'Slateport City');
+values('Pine', 'Slateport City');
 
 insert into Professors
-value('Lemon', 'Mossdeep City');
+values('Lemon', 'Mossdeep City');
 
 insert into Professors
-value('Holly', 'Ever Grand City');
+values('Holly', 'Ever Grand City');
