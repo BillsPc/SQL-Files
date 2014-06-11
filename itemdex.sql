@@ -35,13 +35,13 @@ insert into ItemDex(itemName, description)
 values('Dome Fossil', 'Changes into Kabuto.');
 
 insert into ItemDex(itemName, description)
-values('Elixer', 'Gives  PP to all Attacks.');
+values('Elixer', 'Gives 10 PP to all Attacks.');
 
 insert into ItemDex(itemName, description)
 values('Escape Rope', 'Used to escape an area.');
 
 insert into ItemDex(itemName, description)
-values('Ether', 'Gives  PP to one Ability.');
+values('Ether', 'Gives 10 PP to one Ability.');
 
 insert into ItemDex(itemName, description)
 values('Exp. All', 'Shares experience points.');
@@ -50,7 +50,7 @@ insert into ItemDex(itemName, description)
 values('Fire Stone', 'Evolves some Fire Pokemon.');
 
 insert into ItemDex(itemName, description)
-values('Fresh Water', 'Quenches thirst. Restores  HP.');
+values('Fresh Water', 'Quenches thirst. Restores 50 HP.');
 
 insert into ItemDex(itemName, description)
 values('Full Heal', 'Cures any ailments.');
@@ -74,10 +74,10 @@ insert into ItemDex(itemName, description)
 values('Helix Fossil', 'Changes into Omanyte.');
 
 insert into ItemDex(itemName, description)
-values('HP Up', 'Increases HP by .');
+values('HP Up', 'Increases HP by 1.');
 
 insert into ItemDex(itemName, description)
-values('Hyper Potion', 'Restores  HP.');
+values('Hyper Potion', 'Restores 200 HP.');
 
 insert into ItemDex(itemName, description)
 values('Ice Heal', 'Heals frozen Pokemon.');
@@ -92,19 +92,19 @@ insert into ItemDex(itemName, description)
 values('Leaf Stone', 'Evolves some Grass Pokemon');
 
 insert into ItemDex(itemName, description)
-values('Lemonade', 'Quenches thirst. Restores  HP.');
+values('Lemonade', 'Quenches thirst. Restores 80 HP.');
 
 insert into ItemDex(itemName, description)
 values('Lift Key', 'Activates Game Corner Elevator.');
 
 insert into ItemDex(itemName, description)
-values('Master Ball', 'Catches Pokemon % of time.');
+values('Master Ball', 'Catches Pokemon 100% of time.');
 
 insert into ItemDex(itemName, description)
 values('Max Elixer', 'Restores all PP.');
 
 insert into ItemDex(itemName, description)
-values('Max Ether', 'Restores all PP of  ability.');
+values('Max Ether', 'Restores all PP of 1 ability.');
 
 insert into ItemDex(itemName, description)
 values('Max Potion', 'Restores all HP.');
@@ -119,7 +119,7 @@ insert into ItemDex(itemName, description)
 values('Moon Stone', 'Evolves some Pokemon.');
 
 insert into ItemDex(itemName, description)
-values('Nugget', 'Sold for $.');
+values('Nugget', 'Sold for $5000.');
 
 insert into ItemDex(itemName, description)
 values('Oaks Parcel', 'Exchange for Pokedex.');
@@ -146,16 +146,16 @@ insert into ItemDex(itemName, description)
 values('Pokeflute', 'Wakes sleeping Pokemon.');
 
 insert into ItemDex(itemName, description)
-values('Potion', 'Restores  HP.');
+values('Potion', 'Restores 20 HP.');
 
 insert into ItemDex(itemName, description)
-values('PP Up', 'Increases PP by .');
+values('PP Up', 'Increases PP by 1.');
 
 insert into ItemDex(itemName, description)
 values('Protein', 'Increases Attack level.');
 
 insert into ItemDex(itemName, description)
-values('Rare Candy', 'Increases Exp Level by .');
+values('Rare Candy', 'Increases Exp Level by 1.');
 
 insert into ItemDex(itemName, description)
 values('Repel', 'Prevents wild Pokemon from attacking.');
@@ -176,10 +176,10 @@ insert into ItemDex(itemName, description)
 values('Silph Scope', 'Used to identify Ghosts.');
 
 insert into ItemDex(itemName, description)
-values('Soda Pop', 'Quenches thirst. Restores  HP.');
+values('Soda Pop', 'Quenches thirst. Restores 60 HP.');
 
 insert into ItemDex(itemName, description)
-values('Super Potion', 'Restores  HP.');
+values('Super Potion', 'Restores 50 HP.');
 
 insert into ItemDex(itemName, description)
 values('Super Repel', 'Prevents wild Pokemon from attacking.');
