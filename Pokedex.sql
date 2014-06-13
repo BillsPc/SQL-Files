@@ -1,11 +1,11 @@
---Populating Pokedex table
---PokeDex (dexNo, species, type, gender)
+#Populating Pokedex table
+#PokeDex (dexNo, species, type, gender)
 
 
--- dexNo: From 1-151
--- species: String representing pokemon names
--- type: Consists of any 1 or 2 Grass, Poison, Fire, Water, Bug, Flying, Normal, Electric, 
--- Ground, Rock, Fairy, Psychic, Fighting, Dragon, Ice, Ghost
+# dexNo: From 1-151
+# species: String representing pokemon names
+# type: Consists of any 1 or 2 Grass, Poison, Fire, Water, Bug, Flying, Normal, Electric, 
+# Ground, Rock, Fairy, Psychic, Fighting, Dragon, Ice, Ghost
 
 
 insert into Pokedex
