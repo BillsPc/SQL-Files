@@ -1,0 +1,206 @@
+INSERT INTO ItemHeld
+VALUES( 1, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 3, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 5, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 7, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 9, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 10, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 11, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 13, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 14, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 17, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 18, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 20, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 21, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 22, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 23, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 24, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 27, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 28, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 30, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 31, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 33, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 34, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 35, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 36, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 37, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 40, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 41, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 42, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 50, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 55, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 56, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 57, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 58, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 59, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 60, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 61, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 62, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 63, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 64, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 70, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 72, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 74, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 76, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 78, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 80, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 81, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 82, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 83, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 84, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 85, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 86, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 87, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 88, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 89, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 90, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 93, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 94, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 98, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 99, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 100, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 101, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 102, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 103, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 105, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 107, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 108, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 109, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 110, RAND() * (72-1)+1);
+
+INSERT INTO ItemHeld
+VALUES( 104, RAND() * (72-1)+1);
