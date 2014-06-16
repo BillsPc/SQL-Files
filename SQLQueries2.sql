@@ -152,3 +152,14 @@ SELECT *
 FROM Trainers
 WHERE Trainers.trainerName LIKE "%insertedName%";
 
+#FRIEND STATISTICS
+
+CREATE VIEW friendsPokemon(int trainerID, int pokeID, int pokeType, int level) AS
+SELECT o.trainerID, o.pokeID, p.type, p.level
+FROM Owns o, Friends f, Pokemon p
+WHERE f.trainerID1 = insertedTrainerID AND f.trainerID2 = o.trainerID AND o.pokeID = p.pokeID;
+
+#show friend stats (number of pokemon, average level, strongest pokemon)
+SELECT trainerID, COUNT(pokeID), AVG(level), MAX(level)
+FROM friendsPokemon
+GROUP BY trainerID;
