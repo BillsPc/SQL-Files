@@ -99,11 +99,16 @@ SELECT *
 FROM Pokemon, Owns, Trainers
 WHERE Pokemon.dexNo = Owns.dexNo AND Trainers.trainerID = Owns.trainerID AND Trainers.trainerName LIKE "%insertedname%";
 
-#find strongest pokemon for each trainerID
-
+#find strongest pokemon for trainerID
 Select Owns.trainerID, Max(level)
 FROM Pokemon, Owns
-WHERE Pokemon.pokeID = Owns.pokeID AND Owns.TrainerID = insertedTrainerID
+WHERE Pokemon.pokeID = Owns.pokeID
+GROUP BY Owns.trainerID;
+
+#find average level for trainerID
+Select Owns.trainerID, AVG(level)
+FROM Pokemon, Owns
+WHERE Pokemon.pokeID = Owns.pokeID
 GROUP BY Owns.trainerID;
 
 #PROFESSOR ADMINISTRATIVE QUERIES
