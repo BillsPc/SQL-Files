@@ -1,9 +1,3 @@
-#1st gen
-#TODO: Population Pokedex = Cass
-#TODO: Population rest = Josh
-#TODO: Total participation profmanagebox, owns
-#CHECKS are ignored
-
 SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS profmanagebox;
 DROP TABLE IF EXISTS profmanageowning;
@@ -51,8 +45,8 @@ region VARCHAR(40) NULL
 CREATE TABLE Trainers(
 trainerID INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
 trainerName VARCHAR(40) NOT NULL,
-townName VARCHAR(40) NOT NULL
-#FOREIGN KEY (townName) REFERENCES Towns (townName)
+townName VARCHAR(40) NOT NULL,
+FOREIGN KEY (townName) REFERENCES Towns (townName)
 );
 
 CREATE TABLE Friends(
@@ -74,13 +68,13 @@ description VARCHAR(40) NOT NULL
 CREATE TABLE ItemHeld(
 pokeID INT UNSIGNED NOT NULL,
 itemID INT UNSIGNED NOT NULL,
-FOREIGN KEY (pokeID) REFERENCES Pokemon (pokeID), FOREIGN KEY (itemID) REFERENCES ItemDex(itemID), PRIMARY KEY (pokeID, itemID)
+FOREIGN KEY (pokeID) REFERENCES Pokemon (pokeID) ON DELETE CASCADE, FOREIGN KEY (itemID) REFERENCES ItemDex(itemID), PRIMARY KEY (pokeID, itemID)
 );
 
 CREATE TABLE Owns (
 trainerID INT UNSIGNED NOT NULL,
 pokeID INT UNSIGNED NOT NULL,
-boxNumber INT UNSIGNED NULL, PRIMARY KEY (trainerID, pokeID), FOREIGN KEY (trainerID) REFERENCES Trainers(trainerID), FOREIGN KEY (pokeID) REFERENCES Pokemon(pokeID), FOREIGN KEY (boxNumber) REFERENCES Box(boxNumber)
+boxNumber INT UNSIGNED NOT NULL, PRIMARY KEY (trainerID, pokeID), FOREIGN KEY (trainerID) REFERENCES Trainers(trainerID), FOREIGN KEY (pokeID) REFERENCES Pokemon(pokeID), FOREIGN KEY (boxNumber) REFERENCES Box(boxNumber)
 );
 
 CREATE TABLE ProfManageBox (
